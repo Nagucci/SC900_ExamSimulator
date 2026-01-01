@@ -4881,6 +4881,26 @@ if (pauseBtn) {
       renderMarkForReview(question, wrapper);
     }
 
+    function renderSingleChoiceQuestion(q, container) {
+      container.innerHTML = '';
+      const title = document.createElement('div'); title.className = 'question-text';
+      title.textContent = q.question || 'Question'; container.appendChild(title);
+      renderQuestionImages(q, container);
+      const list = document.createElement('div'); list.className = 'options';
+      (q.options || []).forEach((opt, i) => {
+        const id = `q${q.id}_opt${i}`;
+        const row = document.createElement('label'); row.className = 'option';
+        const rb = document.createElement('input'); rb.type = 'radio'; rb.name = `q${q.id}`; rb.id = id; rb.value = opt.value ?? opt;
+        if (userAnswers[q.id] === rb.value) rb.checked = true;
+        rb.addEventListener('change', () => onAnswerChange(q.id, rb.value));
+        row.appendChild(rb); row.appendChild(document.createTextNode(opt.label ?? String(opt)));
+        list.appendChild(row);
+      });
+      container.appendChild(list);
+      renderMarkForReview(q, container);
+    }
+
+
     /* ===================== Bucket Question (NEW type) ===================== */
     function normalizeBucketItems(q) {
       const src = Array.isArray(q.items) ? q.items : (Array.isArray(q.options) ? q.options : []);
@@ -5680,3 +5700,4 @@ if (reviewMarkedBtnMobile) reviewMarkedBtnMobile.addEventListener('click', handl
   </script>
 </body>
 </html>
+
