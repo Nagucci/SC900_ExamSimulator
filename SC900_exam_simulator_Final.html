@@ -2658,7 +2658,7 @@
             "D. prompting multi-factor authentication (MFA)"
         ],
         "answer": "C. enable limited experiences, such as blocking download of sensitive information",
-        "explanation": "The correct answer is C, enabling limited experiences, such as blocking the download of sensitive information.\n Conditional Access session controls operate after access has been granted based on the initial conditions (user, location, device, etc.). They provide granular control over what a user can do during an active session.\n Options A, B, and D are enforced before access is granted. Device compliance (A) and client app compliance (B) are checks performed during the initial access decision to ensure the device and application meet organizational security standards before granting access. MFA (D) is also a common access control enforced before a session begins.\n Session controls, on the other hand, modify the session itself. For example, a session control can prevent users from downloading files from SharePoint if they are accessing it from an unmanaged device, even though they were initially granted access. This minimizes data leakage without fully blocking access. Session controls are integrated with services like Microsoft Cloud App Security (MCAS), allowing for real-time monitoring and control of user activities during a session. Common actions include blocking downloads, applying data loss prevention (DLP) policies, monitoring sessions for risky behavior, and restricting copy/paste actions.\n Option C directly reflects the capability of session controls to limit user actions within a session to protect sensitive data. \n Here are some authoritative links for further research:\n Microsoft Learn on Conditional Access session controls: https://learn.microsoft.com/enus/entra/identity/conditional-access/concept-conditional-access-session \n Microsoft documentation on Conditional Access: https://learn.microsoft.com/en-us/entra/identity/conditionalaccess/Overview",
+        "explanation": "The correct answer is C, enabling limited experiences, such as blocking the download of sensitive information.\n Conditional Access session controls operate after access has been granted based on the initial conditions (user, location, device, etc.). They provide granular control over what a user can do during an active session.\n Options A, B, and D are enforced before access is granted. Device compliance (A) and client app compliance (B) are checks performed during the initial access decision to ensure the device and application meet organizational security standards before granting access. MFA (D) is also a common access control enforced before a session begins.\n Session controls, on the other hand, modify the session itself. For example, a session control can prevent users from downloading files from SharePoint if they are accessing it from an unmanaged device, even though they were initially granted access. This minimizes data leakage without fully blocking access. Session controls are integrated with services like Microsoft Cloud App Security (MCAS), allowing for real-time monitoring and control of user activities during a session. Common actions include blocking downloads, applying data loss prevention (DLP) policies, monitoring sessions for risky behavior, and restricting copy/paste actions.\n Option C directly reflects the capability of session controls to limit user actions within a session to protect sensitive data. \n Here are some authoritative links for further research:\n<a href=https://learn.microsoft.com/enus/entra/identity/conditional-access/concept-conditional-access-session>Conditional Access session controls</a>\n <a href=https://learn.microsoft.com/en-us/entra/identity/conditionalaccess/Overview>Conditional Access</a>",
         "images": [],
         "interactivity": null
     },
@@ -2681,7 +2681,7 @@
             "correctAnswer": true
         }
     ],
-    "explanation": "Correct Answers: No, Yes, Yes.\n • Identity Protection does **not** add users to groups based on risk level — group membership automation is not part of Identity Protection.\n • Identity Protection *can* detect leaked credentials using its 'Leaked Credentials' detection.\n • Conditional Access can use risk levels (user risk or sign-in risk) from Identity Protection to enforce MFA. \nReference:\n https://learn.microsoft.com/azure/active-directory/identity-protection/overview-identity-protection",
+    "explanation": "Correct Answers: No, Yes, Yes.\n • Identity Protection does **not** add users to groups based on risk level — group membership automation is not part of Identity Protection.\n • Identity Protection *can* detect leaked credentials using its 'Leaked Credentials' detection.\n • Conditional Access can use risk levels (user risk or sign-in risk) from Identity Protection to enforce MFA. \nReference:\n <a href=https://learn.microsoft.com/azure/active-directory/identity-protection/overview-identity-protection>https://learn.microsoft.com/azure/active-directory/identity-protection/overview-identity-protection</a>",
     "images": []
 },
 {
@@ -2695,7 +2695,7 @@
             "D. a user risk policy"
         ],
         "answer": "C. a Conditional Access policy",
-        "explanation": "The correct answer is C. a Conditional Access policy.\n Conditional Access policies in Azure Active Directory (Azure AD) are the primary mechanism for enforcing MFA for specific groups. These policies allow administrators to define conditions under which users must satisfy certain requirements, such as using MFA, before gaining access to resources.\n Here's why the other options are incorrect:\n A. Azure Policy: Azure Policy is primarily used for managing and enforcing organizational standards related to resource configuration and compliance. While it can enforce certain security settings, it isn't designed for directly enforcing MFA for specific user groups during sign-in.\n B. a communication compliance policy: Communication compliance policies focus on detecting regulatory compliance violations within internal and external communications, like email and Teams messages. They do not control authentication methods.\n D. a user risk policy: User risk policies use Azure AD Identity Protection to automatically respond to risky sign-in behavior. While they might trigger MFA challenges based on risk levels, they are not the best way to mandate MFA for a specific group regardless of perceived risk. Conditional Access is more deterministic for enforcing MFA consistently.\n A Conditional Access policy can be configured to target a specific group of users, applications, and locations. Within the policy, you can specify that MFA is required as a condition for access. This ensures that all users in the defined group must authenticate using MFA whenever they attempt to access Azure AD-protected resources that fall under the policy's scope. This provides a granular and effective way to enforce MFA and improve security posture. \n Authoritative Links:\n Microsoft Documentation on Conditional Access: https://learn.microsoft.com/en-us/azure/activedirectory/conditional-access/overview \n Common Conditional Access policies: https://learn.microsoft.com/en-us/azure/active-directory/conditionalaccess/concept-conditional-access-policy-common",
+        "explanation": "The correct answer is C. a Conditional Access policy.\n Conditional Access policies in Azure Active Directory (Azure AD) are the primary mechanism for enforcing MFA for specific groups. These policies allow administrators to define conditions under which users must satisfy certain requirements, such as using MFA, before gaining access to resources.\n Here's why the other options are incorrect:\n A. Azure Policy: Azure Policy is primarily used for managing and enforcing organizational standards related to resource configuration and compliance. While it can enforce certain security settings, it isn't designed for directly enforcing MFA for specific user groups during sign-in.\n B. a communication compliance policy: Communication compliance policies focus on detecting regulatory compliance violations within internal and external communications, like email and Teams messages. They do not control authentication methods.\n D. a user risk policy: User risk policies use Azure AD Identity Protection to automatically respond to risky sign-in behavior. While they might trigger MFA challenges based on risk levels, they are not the best way to mandate MFA for a specific group regardless of perceived risk. Conditional Access is more deterministic for enforcing MFA consistently.\n A Conditional Access policy can be configured to target a specific group of users, applications, and locations. Within the policy, you can specify that MFA is required as a condition for access. This ensures that all users in the defined group must authenticate using MFA whenever they attempt to access Azure AD-protected resources that fall under the policy's scope. This provides a granular and effective way to enforce MFA and improve security posture. \n Authoritative Links:\n<a href=https://learn.microsoft.com/en-us/entra/identity/conditionalaccess/Overview>Conditional Access</a>\n<a href=https://learn.microsoft.com/en-us/azure/active-directory/conditionalaccess/concept-conditional-access-policy-common>Common Conditional Access policies</a>",
         "images": [],
         "interactivity": null
     },
@@ -2718,7 +2718,7 @@
             "correctAnswer": true
         }
     ],
-    "explanation": "Correct Answers: Yes, No, Yes.\n• Hybrid identity is created **on-premises** and synced to Azure AD using Azure AD Connect.\n • Synchronization is **one-way only** (on‑premises → Azure AD). Cloud‑created Azure AD accounts do NOT sync back to on‑prem AD.\n• Hybrid authentication can be done via **Azure AD**, **Active Directory Federation Services (AD FS)**, or another supported identity provider. \nReference:\n https://learn.microsoft.com/azure/active-directory/hybrid/whatis-hybrid-identity",
+    "explanation": "Correct Answers: Yes, No, Yes.\n• Hybrid identity is created **on-premises** and synced to Azure AD using Azure AD Connect.\n • Synchronization is **one-way only** (on‑premises → Azure AD). Cloud‑created Azure AD accounts do NOT sync back to on‑prem AD.\n• Hybrid authentication can be done via **Azure AD**, **Active Directory Federation Services (AD FS)**, or another supported identity provider. \nReference:\n<a href=https://learn.microsoft.com/azure/active-directory/hybrid/whatis-hybrid-identity>https://learn.microsoft.com/azure/active-directory/hybrid/whatis-hybrid-identity</a>",
     "images": []
 },
 
@@ -2762,7 +2762,7 @@
             "correctAnswer": true
         }
     ],
-    "explanation": "Correct Answers: Yes, No, Yes.\n• Azure AD B2C supports authentication using social identities (Google, Facebook, Microsoft, etc.) or enterprise identities via federated identity providers.\n• Azure AD B2C uses a **separate directory/tenant** — it is not the same as the organization's Azure AD tenant, and users are not managed together.\n• Azure AD B2C allows extensive **custom branding**, including custom HTML, CSS, company logos, colors, and layouts in user flows. \nReference:\n https://learn.microsoft.com/azure/active-directory-b2c/overview",
+    "explanation": "Correct Answers: Yes, No, Yes.\n• Azure AD B2C supports authentication using social identities (Google, Facebook, Microsoft, etc.) or enterprise identities via federated identity providers.\n• Azure AD B2C uses a **separate directory/tenant** — it is not the same as the organization's Azure AD tenant, and users are not managed together.\n• Azure AD B2C allows extensive **custom branding**, including custom HTML, CSS, company logos, colors, and layouts in user flows. \nReference:\n <a href=https://learn.microsoft.com/azure/active-directory-b2c/overview>https://learn.microsoft.com/azure/active-directory-b2c/overview</a>",
     "images": []
 },
 
@@ -2784,7 +2784,7 @@
             "correctAnswer": true
         }
     ],
-    "explanation": "Correct Answers: No, Yes, Yes.\n • Software tokens (like authenticator app codes) still require a password — they are MFA, **not** passwordless.\n • Windows Hello provides passwordless authentication using biometrics (face, fingerprint) or PIN.\n • FIDO2 security keys use hardware-based authentication, fully passwordless and phishing-resistant. \nReference:\n https://learn.microsoft.com/azure/active-directory/authentication/concept-authentication-passwordless",
+    "explanation": "Correct Answers: No, Yes, Yes.\n • Software tokens (like authenticator app codes) still require a password — they are MFA, **not** passwordless.\n • Windows Hello provides passwordless authentication using biometrics (face, fingerprint) or PIN.\n • FIDO2 security keys use hardware-based authentication, fully passwordless and phishing-resistant. \nReference:\n <a href=https://learn.microsoft.com/azure/active-directory/authentication/concept-authentication-passwordless>https://learn.microsoft.com/azure/active-directory/authentication/concept-authentication-passwordless</a>",
     "images": []
 },
 
@@ -2799,7 +2799,7 @@
             "D. secure score"
         ],
         "answer": "D. secure score",
-        "explanation": "The correct answer is D. secure score.\n Here's why: Microsoft Defender for Cloud's free mode, also known as Cloud Security Posture Management (CSPM), provides basic security recommendations and a high-level security score. The Secure Score is a central component of the free tier, reflecting your overall security posture based on configuration weaknesses and unmet security controls across your Azure, AWS, and GCP environments. It gives you a snapshot of security risks and highlights areas for improvement.\n Options A, B, and C are part of the enhanced security features available with Microsoft Defender for Cloud's paid plans (Defender plans). Threat protection alerts, JIT VM access, and vulnerability scanning of virtual machines require an active Defender plan for the specific resource type (e.g., Defender for Servers for VM scanning). These features provide active threat detection, remediation guidance, and just-in-time access control for resources, greatly enhancing the cloud workload protection. These are premium features. The free tier focuses on foundational security hygiene and posture management, while the paid tiers offer more in-depth threat protection and security management. Defender for Cloud's free mode allows organizations to gain visibility into their cloud security posture and identify basic security gaps, guiding them toward adopting more robust security measures.\n Therefore, secure score is the primary security feature offered in the free mode of Microsoft Defender for Cloud to improve overall cloud security posture.   \nReference links:\n Microsoft Defender for Cloud Pricing: https://azure.microsoft.com/en-us/pricing/details/defender-for-cloud/ (Focus on the 'Free CSPM' section to understand its features)\n What is Microsoft Defender for Cloud? https://learn.microsoft.com/en-us/azure/defender-forcloud/defender-for-cloud-introduction",
+        "explanation": "The correct answer is D. secure score.\n Here's why: Microsoft Defender for Cloud's free mode, also known as Cloud Security Posture Management (CSPM), provides basic security recommendations and a high-level security score. The Secure Score is a central component of the free tier, reflecting your overall security posture based on configuration weaknesses and unmet security controls across your Azure, AWS, and GCP environments. It gives you a snapshot of security risks and highlights areas for improvement.\n Options A, B, and C are part of the enhanced security features available with Microsoft Defender for Cloud's paid plans (Defender plans). Threat protection alerts, JIT VM access, and vulnerability scanning of virtual machines require an active Defender plan for the specific resource type (e.g., Defender for Servers for VM scanning). These features provide active threat detection, remediation guidance, and just-in-time access control for resources, greatly enhancing the cloud workload protection. These are premium features. The free tier focuses on foundational security hygiene and posture management, while the paid tiers offer more in-depth threat protection and security management. Defender for Cloud's free mode allows organizations to gain visibility into their cloud security posture and identify basic security gaps, guiding them toward adopting more robust security measures.\n Therefore, secure score is the primary security feature offered in the free mode of Microsoft Defender for Cloud to improve overall cloud security posture.\nReference links:\n <a href=https://azure.microsoft.com/en-us/pricing/details/defender-for-cloud>Microsoft Defender for Cloud Pricing</a> (Focus on the 'Free CSPM' section to understand its features)\n<a href=https://learn.microsoft.com/en-us/azure/defender-forcloud/defender-for-cloud-introduction>What is Microsoft Defender for Cloud?</a>",
         "images": [],
         "interactivity": null
     },
@@ -2814,7 +2814,7 @@
             "D. Windows 10 and newer, Android, and iOS Windows 10 and newer and iOS only."
         ],
         "answer": "C. Windows 10 and newer and MacOS only",
-        "explanation": "Correct Answer is C. Windows 10 and newer and MacOS only. \nReference:\n https://learn.microsoft.com/en-us/microsoft-365/compliance/dlp-learn-about-dlp?view=o365-worldwide",
+        "explanation": "Correct Answer is C. Windows 10 and newer and MacOS only. \nReference:\n <a href=https://learn.microsoft.com/en-us/microsoft-365/compliance/dlp-learn-about-dlp?view=o365-worldwide>https://learn.microsoft.com/en-us/microsoft-365/compliance/dlp-learn-about-dlp?view=o365-worldwide</a>",
         "images": [],
         "interactivity": null
     },
@@ -2837,7 +2837,7 @@
             "correctAnswer": true
         }
     ],
-    "explanation": "Correct Answers: Yes, Yes, Yes.\n• Defender for Cloud includes Defender for Storage, which detects vulnerabilities and advanced threats for Azure Storage.\n• CSPM capabilities (Secure Score, recommendations, compliance posture) are **included for free** in all Azure subscriptions.\n• Defender for Cloud evaluates security posture and threats across **Azure, hybrid, and on-premises** workloads.      \nReference:\n https://learn.microsoft.com/azure/defender-for-cloud/defender-for-storage-introduction  https://learn.microsoft.com/azure/defender-for-cloud/overview",
+    "explanation": "Correct Answers: Yes, Yes, Yes.\n• Defender for Cloud includes Defender for Storage, which detects vulnerabilities and advanced threats for Azure Storage.\n• CSPM capabilities (Secure Score, recommendations, compliance posture) are **included for free** in all Azure subscriptions.\n• Defender for Cloud evaluates security posture and threats across **Azure, hybrid, and on-premises** workloads.      \nReference:\n<<a href=https://learn.microsoft.com/azure/defender-for-cloud/defender-for-storage-introduction>https://learn.microsoft.com/azure/defender-for-cloud/defender-for-storage-introduction</a>\n <a href=https://learn.microsoft.com/azure/defender-for-cloud/overview>https://learn.microsoft.com/azure/defender-for-cloud/overview</a>",
     "images": []
 },
 
@@ -2853,7 +2853,7 @@
   ],
   "correctAnswer": "Azure Key Vault",
   "placeholder": "— Select an option —",
-  "explanation": "Correct Answer is Azure Key Vault. \n Azure Key Vault is a cloud service that securely stores and manages application secrets, such as passwords, connection strings, and cryptographic keys. It helps protect sensitive information and supports secure access for applications.     \nReference:\n Microsoft Azure Key Vault documentation https://learn.microsoft.com/en-us/azure/key-vault/"
+  "explanation": "Correct Answer is Azure Key Vault. \n Azure Key Vault is a cloud service that securely stores and manages application secrets, such as passwords, connection strings, and cryptographic keys. It helps protect sensitive information and supports secure access for applications.\nReference:\n<a href=https://learn.microsoft.com/en-us/azure/key-vault>Microsoft Azure Key Vault</a>"
 },
 {
   "id": 145,
@@ -2867,7 +2867,7 @@
   ],
   "correctAnswer": "Microsoft Defender for Cloud",
   "placeholder": "— Select an option —",
-  "explanation": "Correct Answer is Microsoft Defender for Cloud. \nMicrosoft Defender for Cloud is a comprehensive cloud security solution that provides workload protection for Azure and hybrid environments. It helps detect threats, improve security posture, and protect resources across cloud and on-premises infrastructure.     \nReference:\n Microsoft Defender for Cloud documentation. https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction"
+  "explanation": "Correct Answer is Microsoft Defender for Cloud. \nMicrosoft Defender for Cloud is a comprehensive cloud security solution that provides workload protection for Azure and hybrid environments. It helps detect threats, improve security posture, and protect resources across cloud and on-premises infrastructure.\nReference:\n<a href=https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction>Microsoft Defender for Cloud</a>"
 },
  {
         "id": 146,
@@ -2880,7 +2880,7 @@
             "D. 1000"
         ],
         "answer": "B. 100",
-        "explanation": "The correct answer is B.\n Azure DDoS Protection Standard is designed to protect all Azure resources within a virtual network (VNet). The key is that within the protected VNet, the number of protected resources is essentially unlimited without incurring additional charges for each resource protected. The cost is based on the VNet protected, not the number of individual resources residing within that VNet. This includes resources like virtual machines, load balancers, application gateways, and others. \n Therefore, the question asking for the maximum number of resources is misleading as the protection is applied at the VNet level. There's no artificial limit of 50, 100, 500 or 1000 resources after which costs increase within a protected VNet. The cost scales with the number of protected VNets. While a VNet could theoretically contain thousands of resources, Azure DDoS Protection Standard protects them all for the cost of the plan associated with that VNet.\n Hence, while not explicitly limited, '100' is the closest and most often used approximation to represent a 'large number' of resources as it conveys the concept of many without specifying a hard limit. However, it's crucial to understand that DDoS Protection Standard is enabled and billed per VNet. Protection of resources in another VNet requires a separate enablement and incurs a separate cost. There are no specific resource limits within a given protected VNet influencing the DDoS Protection cost. The answer should be viewed as implying 'a typical large number' within a protected VNet. \nResources:\n Azure DDoS Protection overview: This document provides a comprehensive overview of Azure DDoS Protection, its features, and benefits. https://learn.microsoft.com/en-us/azure/ddos-protection/ddos-protection-overview \n Azure DDoS Protection pricing: This page provides details on the pricing model for Azure DDoS Protection Standard. It emphasizes that the cost is per protected VNet. https://azure.microsoft.com/en-us/pricing/details/ddos-protection/",
+        "explanation": "The correct answer is B.\n Azure DDoS Protection Standard is designed to protect all Azure resources within a virtual network (VNet). The key is that within the protected VNet, the number of protected resources is essentially unlimited without incurring additional charges for each resource protected. The cost is based on the VNet protected, not the number of individual resources residing within that VNet. This includes resources like virtual machines, load balancers, application gateways, and others. \n Therefore, the question asking for the maximum number of resources is misleading as the protection is applied at the VNet level. There's no artificial limit of 50, 100, 500 or 1000 resources after which costs increase within a protected VNet. The cost scales with the number of protected VNets. While a VNet could theoretically contain thousands of resources, Azure DDoS Protection Standard protects them all for the cost of the plan associated with that VNet.\n Hence, while not explicitly limited, '100' is the closest and most often used approximation to represent a 'large number' of resources as it conveys the concept of many without specifying a hard limit. However, it's crucial to understand that DDoS Protection Standard is enabled and billed per VNet. Protection of resources in another VNet requires a separate enablement and incurs a separate cost. There are no specific resource limits within a given protected VNet influencing the DDoS Protection cost. The answer should be viewed as implying 'a typical large number' within a protected VNet. \nResources:\n  This document provides a comprehensive overview of Azure DDoS Protection, its features, and benefits.<a href=https://learn.microsoft.com/en-us/azure/ddos-protection/ddos-protection-overview>overview of Azure DDoS Protection</a> \n : This page provides details on the pricing model for Azure DDoS Protection Standard. It emphasizes that the cost is per protected VNet.<a href=https://azure.microsoft.com/en-us/pricing/details/ddos-protection/>Azure DDoS Protection pricing</a>",
         "images": [],
         "interactivity": null
     },
@@ -2900,7 +2900,7 @@
     ],
     "allow_multiple": true,
     "expected_selection_count": 2,
-    "explanation": "Correct Answer is A,D. \n The main reasons for segmentation are: The ability to group related assets that are a part of (or support) workload operations. Isolation of resources. Governance policies set by the organization. \nLink:\n https://learn.microsoft.com/en-us/azure/architecture/framework/security/design-network-segmentation",
+    "explanation": "Correct Answer is A,D. \n The main reasons for segmentation are: The ability to group related assets that are a part of (or support) workload operations. Isolation of resources. Governance policies set by the organization.\nLink:\n <a href=https://learn.microsoft.com/en-us/azure/architecture/framework/security/design-network-segmentation>https://learn.microsoft.com/en-us/azure/architecture/framework/security/design-network-segmentation</a>",
     "images": [],
     "interactivity": null
   },
@@ -2916,7 +2916,7 @@
   ],
   "correctAnswer": "Azure Monitor workbook templates",
   "placeholder": "— Select an option —",
-  "explanation": "Correct Answer is Azure Monitor workbook templates. \n Microsoft Sentinel uses Azure Monitor workbook templates to provide quick insights into data. These templates allow security teams to visualize and analyze data through interactive dashboards, enabling faster detection and investigation of threats.     \nReference:\n Microsoft Sentinel documentation.  https://learn.microsoft.com/en-us/azure/sentinel/overview#create-interactive-reports-by-using-workbooks \n After you onboard to Microsoft Sentinel, monitor your data by using the integration with Azure Monitor workbooks. Workbooks display differently in Microsoft Sentinel than in Azure Monitor. But it may be useful for you to see how to create a workbook in Azure Monitor. Microsoft Sentinel allows you to create custom workbooks across your data. Microsoft Sentinel also comes with built-in workbook templates to allow you to quickly gain insights across your data as soon as you connect a data source."
+  "explanation": "Correct Answer is Azure Monitor workbook templates. \n Microsoft Sentinel uses Azure Monitor workbook templates to provide quick insights into data. These templates allow security teams to visualize and analyze data through interactive dashboards, enabling faster detection and investigation of threats.\nReference:\n <a href=https://learn.microsoft.com/en-us/azure/sentinel/overview#create-interactive-reports-by-using-workbooks>Microsoft Sentinel documentation</a>\n After you onboard to Microsoft Sentinel, monitor your data by using the integration with Azure Monitor workbooks. Workbooks display differently in Microsoft Sentinel than in Azure Monitor. But it may be useful for you to see how to create a workbook in Azure Monitor. Microsoft Sentinel allows you to create custom workbooks across your data. Microsoft Sentinel also comes with built-in workbook templates to allow you to quickly gain insights across your data as soon as you connect a data source."
 },
 {
         "id": 149,
@@ -2929,7 +2929,7 @@
             "D. Azure Policy"
         ],
         "answer": "D. Azure Policy",
-        "explanation": "The correct answer is D. Azure Policy. \nAzure Policy is a service in Azure that enables you to create, assign, and manage policies to enforce different rules and effects over your resources. These policies enforce your organizational standards and assess compliance at-scale. Azure Policy evaluates resources for compliance with assigned policies. It provides a unified view of your policy assignments, compliance states, and remediation actions. Azure Policy's key strengths in this scenario are: Compliance Assessment: It actively evaluates the configuration of existing resources against defined policies, identifying non-compliant resources. Enforcement: It can automatically enforce policies (e.g., deny deployment of resources that violate rules, automatically remediate non-compliant resources). Organizational Standards: It helps organizations define and enforce standards related to security, cost management, and governance.\n Why the other options are incorrect:\n Azure Blueprints: Primarily used for deploying and configuring new Azure environments based on a predefined template. While blueprints can include policies, they are primarily focused on initial setup rather than ongoing compliance assessment and enforcement of existing resources. \nAnomaly Detector service: Used for detecting anomalies in time-series data. It's not relevant for assessing the compliance of resource configurations.\n Microsoft Sentinel: A security information and event management (SIEM) and security orchestration, automation, and response (SOAR) solution. While Sentinel can identify security issues, it is not the primary tool for enforcing compliance standards on resource configurations. Its strength lies in threat detection and response, not policy enforcement.\n Therefore, Azure Policy is the most appropriate choice because it's specifically designed to assess compliance and enforce standards for existing Azure resources within a subscription. \nRelevant links for further research:\n Azure Policy documentation https://learn.microsoft.com/en-us/azure/governance/policy/overview \n What is Azure Policy? https://learn.microsoft.com/en-us/azure/governance/policy/overview",
+        "explanation": "The correct answer is D. Azure Policy. \nAzure Policy is a service in Azure that enables you to create, assign, and manage policies to enforce different rules and effects over your resources. These policies enforce your organizational standards and assess compliance at-scale. Azure Policy evaluates resources for compliance with assigned policies. It provides a unified view of your policy assignments, compliance states, and remediation actions. Azure Policy's key strengths in this scenario are: Compliance Assessment: It actively evaluates the configuration of existing resources against defined policies, identifying non-compliant resources. Enforcement: It can automatically enforce policies (e.g., deny deployment of resources that violate rules, automatically remediate non-compliant resources). Organizational Standards: It helps organizations define and enforce standards related to security, cost management, and governance.\n Why the other options are incorrect:\n Azure Blueprints: Primarily used for deploying and configuring new Azure environments based on a predefined template. While blueprints can include policies, they are primarily focused on initial setup rather than ongoing compliance assessment and enforcement of existing resources. \nAnomaly Detector service: Used for detecting anomalies in time-series data. It's not relevant for assessing the compliance of resource configurations.\n Microsoft Sentinel: A security information and event management (SIEM) and security orchestration, automation, and response (SOAR) solution. While Sentinel can identify security issues, it is not the primary tool for enforcing compliance standards on resource configurations. Its strength lies in threat detection and response, not policy enforcement.\n Therefore, Azure Policy is the most appropriate choice because it's specifically designed to assess compliance and enforce standards for existing Azure resources within a subscription. \nRelevant links for further research:\n <a href=https://learn.microsoft.com/en-us/azure/governance/policy/overview>What is Azure Policy?</a>",
         "images": [],
         "interactivity": null
     },
@@ -2944,7 +2944,7 @@
             "D. the status of recommendations"
         ],
         "answer": "A. secure score",
-        "explanation": "The correct answer is A. secure score.\n Microsoft Defender for Cloud's secure score is a single, high-level metric that represents the overall security posture of your Azure subscription. It aggregates security findings from various resources and security recommendations. The score is calculated based on the number of security recommendations addressed and the potential impact of addressing those recommendations. A higher score signifies a better security state. It's a quantifiable representation of how well your environment aligns with Microsoft's security best practices. Defender for Cloud uses the secure score to prioritize recommendations and guide users on improving their security posture. Secure score is a dynamic metric which can increase as you remediate vulnerabilities or deploy security controls.\n Options B, C, and D are incorrect. Resource health, though related to the operational status of a specific resource, doesn't provide a holistic security overview like secure score. Completed controls indicate how many security controls have been implemented, but doesn't aggregate the impact of those controls. The status of recommendations provides granular information, but does not give an overall security health indicator.\n Microsoft Defender for Cloud Secure Score: https://learn.microsoft.com/en-us/azure/defender-forcloud/secure-score-security-controls",
+        "explanation": "The correct answer is A. secure score.\n Microsoft Defender for Cloud's secure score is a single, high-level metric that represents the overall security posture of your Azure subscription. It aggregates security findings from various resources and security recommendations. The score is calculated based on the number of security recommendations addressed and the potential impact of addressing those recommendations. A higher score signifies a better security state. It's a quantifiable representation of how well your environment aligns with Microsoft's security best practices. Defender for Cloud uses the secure score to prioritize recommendations and guide users on improving their security posture. Secure score is a dynamic metric which can increase as you remediate vulnerabilities or deploy security controls.\n Options B, C, and D are incorrect. Resource health, though related to the operational status of a specific resource, doesn't provide a holistic security overview like secure score. Completed controls indicate how many security controls have been implemented, but doesn't aggregate the impact of those controls. The status of recommendations provides granular information, but does not give an overall security health indicator.\n <a href=https://learn.microsoft.com/en-us/azure/defender-forcloud/secure-score-security-controls>Microsoft Defender for Cloud Secure Score</a>",
         "images": [],
         "interactivity": null
     },
@@ -2967,7 +2967,7 @@
             "correctAnswer": true
         }
     ],
-    "explanation": "Correct Answers: No, Yes, Yes.\n• Information barriers do **not** apply to Microsoft Exchange mailboxes.\n• Information barriers **are supported** in SharePoint and OneDrive to prevent restricted groups from accessing each other’s content.\n• Information barriers are a core feature in **Microsoft Teams** to restrict communication and collaboration between defined segments.\nReference:\n https://learn.microsoft.com/microsoft-365/compliance/information-barriers",
+    "explanation": "Correct Answers: No, Yes, Yes.\n• Information barriers do **not** apply to Microsoft Exchange mailboxes.\n• Information barriers **are supported** in SharePoint and OneDrive to prevent restricted groups from accessing each other’s content.\n• Information barriers are a core feature in **Microsoft Teams** to restrict communication and collaboration between defined segments.\nReference:\n <a href=https://learn.microsoft.com/microsoft-365/compliance/information-barriers>https://learn.microsoft.com/microsoft-365/compliance/information-barriers</a>",
     "images": []
 },
 
@@ -2983,7 +2983,7 @@
   ],
   "correctAnswer": "Microsoft Purview Portal",
   "placeholder": "— Select an option —",
-  "explanation": "Insider risk management is configured from the Microsoft Purview Portal. This portal provides tools to detect, investigate, and respond to insider risks such as data leaks, policy violations, and security threats.\nReference:\n Microsoft Insider Risk Management documentation. https://learn.microsoft.com/en-us/purview/insider-risk-management-solution-overview"
+  "explanation": "Insider risk management is configured from the Microsoft Purview Portal. This portal provides tools to detect, investigate, and respond to insider risks such as data leaks, policy violations, and security threats.\nReference:\n<a href=https://learn.microsoft.com/en-us/purview/insider-risk-management-solution-overview>Microsoft Insider Risk Management</a>"
 },
 
 {
@@ -2997,7 +2997,7 @@
             "D. Azure Blueprints"
         ],
         "answer": "D. Azure Blueprints",
-        "explanation": "The correct answer is Azure Blueprints.\n Because it directly addresses the need for repeatability when creating new resources in Azure. Azure Blueprints enable you to define a repeatable set of Azure resources that implement and adhere to an organization's standards, patterns, and requirements. This includes resource groups, policies, Role-Based Access Control (RBAC), and Resource Manager templates, all packaged as a single deployable unit. By using Blueprints, you can consistently create environments without the need for manual configuration or scripting, leading to reduced errors and faster deployment times. This consistency is crucial for compliance and governance, particularly in organizations with strict regulatory requirements. Blueprints promote Infrastructure as Code (IaC) principles, enabling version control and auditability of your environment configurations.\n Azure Policy, while related, focuses more on defining rules and policies to ensure compliance after resources have been deployed, not on orchestrating the initial deployment process.\n Microsoft Sentinel is a SIEM/SOAR solution for threat detection and response, not related to resource deployment.\n Azure Batch is a service for running large-scale parallel and high-performance computing (HPC) applications, and also irrelevant. Blueprints allow standardization and automation from the beginning, significantly simplifying resource management and reducing operational overhead. \nAuthoritative Links:\n Azure Blueprints Documentation: https://learn.microsoft.com/en-us/azure/governance/blueprints/overview \n What is Infrastructure as Code (IaC)? https://www.redhat.com/en/topics/automation/what-is-infrastructureas-code-iac",
+        "explanation": "The correct answer is Azure Blueprints.\n Because it directly addresses the need for repeatability when creating new resources in Azure. Azure Blueprints enable you to define a repeatable set of Azure resources that implement and adhere to an organization's standards, patterns, and requirements. This includes resource groups, policies, Role-Based Access Control (RBAC), and Resource Manager templates, all packaged as a single deployable unit. By using Blueprints, you can consistently create environments without the need for manual configuration or scripting, leading to reduced errors and faster deployment times. This consistency is crucial for compliance and governance, particularly in organizations with strict regulatory requirements. Blueprints promote Infrastructure as Code (IaC) principles, enabling version control and auditability of your environment configurations.\n Azure Policy, while related, focuses more on defining rules and policies to ensure compliance after resources have been deployed, not on orchestrating the initial deployment process.\n Microsoft Sentinel is a SIEM/SOAR solution for threat detection and response, not related to resource deployment.\n Azure Batch is a service for running large-scale parallel and high-performance computing (HPC) applications, and also irrelevant. Blueprints allow standardization and automation from the beginning, significantly simplifying resource management and reducing operational overhead. \nAuthoritative Links:\n <a href=https://learn.microsoft.com/en-us/azure/governance/blueprints/overview >Azure Blueprints</a>\n <a href=https://www.redhat.com/en/topics/automation/what-is-infrastructureas-code-iac>What is Infrastructure as Code (IaC)?</a>",
         "images": [],
         "interactivity": null
     },
@@ -3011,12 +3011,10 @@
             "C. persistent"
         ],
         "answer": "C. persistent",
-        "explanation": "The correct answer is C, persistent.\n Sensitivity labels in Microsoft 365 are designed to be persistent, meaning they travel with the document or email, regardless of where it's stored or shared. This persistence is a critical characteristic because it ensures that the defined protection and governance policies associated with the label remain in effect, even if the file is moved outside the organization's immediate control.\n While encryption (option A) can be configured as an action taken by a sensitivity label, it's not an inherent characteristic of every sensitivity label. A label can exist solely to classify and mark content without encrypting it. Sensitivity labels can classify and protect data without encryption, for example, by applying a watermark or adding a header/footer. The labels primarily function as metadata, indicating the level of sensitivity to applications and services.\n Option B, ‘restricted to predefined categories,’ is misleading. While organizations define the categories and policies associated with sensitivity labels, the system is highly customizable. You're not limited to predefined categories by Microsoft. You create labels that reflect your organization's specific data classification and protection needs. The flexibility of label creation is a core component of Microsoft 365 compliance. The persistence of sensitivity labels enables information governance and helps organizations meet compliance requirements, such as GDPR or HIPAA. By maintaining the label and its associated policies, organizations can track and control sensitive data throughout its lifecycle, mitigating the risk of data leakage or unauthorized access. \nFor further research, refer to the official Microsoft documentation on sensitivity labels:\n Learn about sensitivity labels: https://learn.microsoft.com/en-us/purview/sensitivity-labels",
+        "explanation": "The correct answer is C, persistent.\n Sensitivity labels in Microsoft 365 are designed to be persistent, meaning they travel with the document or email, regardless of where it's stored or shared. This persistence is a critical characteristic because it ensures that the defined protection and governance policies associated with the label remain in effect, even if the file is moved outside the organization's immediate control.\n While encryption (option A) can be configured as an action taken by a sensitivity label, it's not an inherent characteristic of every sensitivity label. A label can exist solely to classify and mark content without encrypting it. Sensitivity labels can classify and protect data without encryption, for example, by applying a watermark or adding a header/footer. The labels primarily function as metadata, indicating the level of sensitivity to applications and services.\n Option B, ‘restricted to predefined categories,’ is misleading. While organizations define the categories and policies associated with sensitivity labels, the system is highly customizable. You're not limited to predefined categories by Microsoft. You create labels that reflect your organization's specific data classification and protection needs. The flexibility of label creation is a core component of Microsoft 365 compliance. The persistence of sensitivity labels enables information governance and helps organizations meet compliance requirements, such as GDPR or HIPAA. By maintaining the label and its associated policies, organizations can track and control sensitive data throughout its lifecycle, mitigating the risk of data leakage or unauthorized access. \nFor further research, refer to the official Microsoft documentation on sensitivity labels:\n <a href=https://learn.microsoft.com/en-us/purview/sensitivity-labels>Sensitivity labels</a>",
         "images": [],
         "interactivity": null
     },
-
-
 {
     "id": 156,
     "type": "boolean",
@@ -3035,7 +3033,7 @@
             "correctAnswer": false
         }
     ],
-    "explanation": "Correct Answers: Yes, No, No.\n • Microsoft Purview includes **sensitive data classification**, labeling, DLP, and compliance capabilities.\n • Microsoft Sentinel is a **SIEM/SOAR security analytics** solution, not a data lifecycle management tool.\n • Microsoft Purview can discover and classify data **across Microsoft 365, Azure, on-premises, AWS, GCP, and other multi-cloud locations** — it is not limited to Azure.  \nReference:\n https://learn.microsoft.com/microsoft-365/compliance/microsoft-purview-overview https://learn.microsoft.com/azure/sentinel/overview",
+    "explanation": "Correct Answers: Yes, No, No.\n • Microsoft Purview includes **sensitive data classification**, labeling, DLP, and compliance capabilities.\n • Microsoft Sentinel is a **SIEM/SOAR security analytics** solution, not a data lifecycle management tool.\n • Microsoft Purview can discover and classify data **across Microsoft 365, Azure, on-premises, AWS, GCP, and other multi-cloud locations** — it is not limited to Azure.  \nReference:\n <a href=https://learn.microsoft.com/microsoft-365/compliance/microsoft-purview-overview>https://learn.microsoft.com/microsoft-365/compliance/microsoft-purview-overview</a>\n<a href=https://learn.microsoft.com/azure/sentinel/overview>https://learn.microsoft.com/azure/sentinel/overview</a>",
     "images": []
 },
 
@@ -3051,10 +3049,8 @@
   ],
   "correctAnswer": "Compliance score",
   "placeholder": "— Select an option —",
-  "explanation": "Correct Answer is Compliance score.\n Compliance score is a metric in Microsoft Purview that measures an organization’s progress in completing recommended actions to reduce risks related to data protection and regulatory standards. It helps organizations improve compliance posture.     \nReference:\n Microsoft Compliance Manager documentation https://learn.microsoft.com/en-us/purview/compliance-manager"
+  "explanation": "Correct Answer is Compliance score.\n Compliance score is a metric in Microsoft Purview that measures an organization’s progress in completing recommended actions to reduce risks related to data protection and regulatory standards. It helps organizations improve compliance posture.     \nReference:\n<a href=https://learn.microsoft.com/en-us/purview/compliance-manager>Microsoft Compliance Manager</a>"
 },
-
-
 {
     "id": 158,
     "type": "boolean",
@@ -3073,12 +3069,9 @@
             "correctAnswer": false
         }
     ],
-    "explanation": "Correct Answers: Yes, No, No.\n• Asymmetric encryption **does** use a public/private key pair (e.g., RSA, ECC).\n• Symmetric encryption uses a **single shared secret key**, not a pair (e.g., AES).\n• Hashing is **one-way** — you cannot decrypt a hash to recover original content.      \nReference:\n https://learn.microsoft.com/azure/security/fundamentals/encryption-overview",
+    "explanation": "Correct Answers: Yes, No, No.\n• Asymmetric encryption **does** use a public/private key pair (e.g., RSA, ECC).\n• Symmetric encryption uses a **single shared secret key**, not a pair (e.g., AES).\n• Hashing is **one-way** — you cannot decrypt a hash to recover original content.      \nReference:\n <a href=https://learn.microsoft.com/azure/security/fundamentals/encryption-overview>https://learn.microsoft.com/azure/security/fundamentals/encryption-overview</a>",
     "images": []
 },
-
-
-
 {
   "id": 160,
   "type": "dropdown",
@@ -3091,9 +3084,8 @@
   ],
   "correctAnswer": "integrity",
   "placeholder": "— Select an option —",
-  "explanation": "Correct Answer is Integrity. Integrity ensures that data remains accurate and unaltered during storage, transmission, and retrieval. It is a core principle of information security, alongside confidentiality and availability.     \nReference:\n https://download.microsoft.com/download/0/4/9/049F6894-3B22-4EC6-8DBD-E4FA27019820/Microsoft_Compliance_Framework_for_Online_Services.pdf. \nensuring DATA is not altered.....'Integrity'"
+  "explanation": "Correct Answer is Integrity. Integrity ensures that data remains accurate and unaltered during storage, transmission, and retrieval. It is a core principle of information security, alongside confidentiality and availability.\nReference:\n <a href=https://download.microsoft.com/download/0/4/9/049F6894-3B22-4EC6-8DBD-E4FA27019820/Microsoft_Compliance_Framework_for_Online_Services.pdf>https://download.microsoft.com/download/0/4/9/049F6894-3B22-4EC6-8DBD-E4FA27019820/Microsoft_Compliance_Framework_for_Online_Services.pdf</a>.\n ensuring DATA is not altered.....'Integrity'"
 },
-
 
 {
   "id": 161,
@@ -3107,7 +3099,7 @@
   ],
   "correctAnswer": "Assessments",
   "placeholder": "— Select an option —",
-  "explanation": "Correct Answer is Assessments. \n Assessments in Microsoft Compliance Manager are used to track compliance with groupings of controls from specific regulations or requirements. They help organizations measure and manage compliance posture effectively.     \nReference:\n Microsoft Compliance Manager documentation https://learn.microsoft.com/en-us/purview/compliance-manager"
+  "explanation": "Correct Answer is Assessments. \n Assessments in Microsoft Compliance Manager are used to track compliance with groupings of controls from specific regulations or requirements. They help organizations measure and manage compliance posture effectively.\nReference:\n<a href=https://learn.microsoft.com/en-us/purview/compliance-manager>Microsoft Compliance Manager</a>"
 },
 {
     "id": 162,
@@ -3127,10 +3119,9 @@
             "correctAnswer": true
         }
     ],
-    "explanation": "Correct Answers: No, Yes, Yes.\n  • In **SaaS**, the cloud provider manages the application, platform, and infrastructure — including application updates. Customers only manage data and access. \n• In **IaaS**, the cloud provider manages the physical datacenter, physical network, and host hardware. The customer manages OS, apps, and data. \n• Across **all Azure deployment models** (SaaS, PaaS, IaaS), the customer always remains responsible for **data security**, access control, and identity.  \nReference:\n https://learn.microsoft.com/azure/security/fundamentals/shared-responsibility",
+    "explanation": "Correct Answers: No, Yes, Yes.\n  • In **SaaS**, the cloud provider manages the application, platform, and infrastructure — including application updates. Customers only manage data and access. \n• In **IaaS**, the cloud provider manages the physical datacenter, physical network, and host hardware. The customer manages OS, apps, and data. \n• Across **all Azure deployment models** (SaaS, PaaS, IaaS), the customer always remains responsible for **data security**, access control, and identity.  \nReference:\n <a href=https://learn.microsoft.com/azure/security/fundamentals/shared-responsibility>https://learn.microsoft.com/azure/security/fundamentals/shared-responsibility</a>",
     "images": []
 },
-
  {
         "id": 163,
         "type": "single_choice",
@@ -3143,7 +3134,7 @@
 "D.an Azure AD security group"
         ],
         "answer": "B.a user-assigned managed identity",
-        "explanation": "The correct answer is B, \nRefrences:\n https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configureportal-windows-vm \n https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azureresources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp#manage-accessto-user-assigned-managed-identities \n https://learn.microsoft.com/en-us/azure/active-directory/managedidentities-azure-resources/qs-configure-cli-windows-vm",
+        "explanation": "The correct answer is B, \nRefrences:\n <a href=https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configureportal-windows-vm>https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configureportal-windows-vm</a>\n <a href=https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azureresources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp#manage-accessto-user-assigned-managed-identities>https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azureresources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp#manage-accessto-user-assigned-managed-identities</a>\n <a href=https://learn.microsoft.com/en-us/azure/active-directory/managedidentities-azure-resources/qs-configure-cli-windows-vm>https://learn.microsoft.com/en-us/azure/active-directory/managedidentities-azure-resources/qs-configure-cli-windows-vm</a>",
         "images": [],
         "interactivity": null
     },
@@ -3166,10 +3157,9 @@
             "correctAnswer": true
         }
     ],
-    "explanation": "Correct Answers: No, No, Yes.\n • Security defaults are **free** and do NOT require Azure AD Premium. \n• Security defaults are **tenant-wide** and cannot be enabled for individual users.\n• When enabled, Security Defaults enforce MFA for **all admin roles**, along with other baseline protections. \nReference:\n https://learn.microsoft.com/azure/active-directory/fundamentals/concept-fundamentals-security-defaults",
+    "explanation": "Correct Answers: No, No, Yes.\n • Security defaults are **free** and do NOT require Azure AD Premium. \n• Security defaults are **tenant-wide** and cannot be enabled for individual users.\n• When enabled, Security Defaults enforce MFA for **all admin roles**, along with other baseline protections. \nReference:\n <a href=https://learn.microsoft.com/azure/active-directory/fundamentals/concept-fundamentals-security-defaults>https://learn.microsoft.com/azure/active-directory/fundamentals/concept-fundamentals-security-defaults</a>",
     "images": []
 },
-
 {
     "id": 165,
     "type": "multiple_choice",
@@ -3188,7 +3178,7 @@
     ],
     "allow_multiple": true,
     "expected_selection_count": 3,
-    "explanation": "Explanation: The correct answer is B, C, and E.\n Let's break down why:\n B. The Microsoft Authenticator App: This app provides a highly secure method of MFA. It can use push notifications for quick approval or generate one-time passcodes (OTPs), both relying on a secure connection to Azure AD and a trusted device. This aligns with modern security best practices, avoiding reliance on easily intercepted channels.\n C. SMS messages: While less secure than app-based methods, SMS messaging is still a viable option for MFA. Azure AD can send a one-time passcode to a user's phone number, requiring them to enter it during sign-in. It offers broad accessibility but has vulnerabilities to SIM swapping and interception.\n E. Windows Hello for Business: This method leverages biometric authentication (fingerprint or facial recognition) or a PIN tied to a specific device. It's integrated deeply into the operating system and linked to Azure AD, providing a strong and convenient form of MFA that relies on device-bound credentials.\n Why the other options are incorrect:\n A. Security Questions: Security questions are generally considered weak forms of authentication. Answers are often easily guessable or discoverable through social engineering, making them unreliable for MFA.\n D. A smart card: While smart cards can be used for authentication in general, Azure AD Multi-Factor Authentication specifically uses the methods in options B, C and E. Smart card authentication would typically involve a certificate-based authentication flow and not a traditional MFA prompt.Justification Details: Azure AD MFA is designed to enhance security by requiring users to provide multiple forms of verification before granting access. The fundamental principle is that compromising one factor (like a password) should not grant unauthorized access because an attacker would also need to overcome another independent factor. The strength of the selected methods lies in their diversity, requiring distinct forms of authentication tied to either something you know (password/PIN), something you have (registered device), or something you are (biometric data).\n Each option B, C, and E requires a separate attack vector than simply compromising a password. \nSupporting Links:\nAzure AD Multi-Factor Authentication https://learn.microsoft.com/en-us/entra/identity/authentication/concept-mfa-howitworks  \nWindows Hello for Business https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/",
+    "explanation": "Explanation: The correct answer is B, C, and E.\n Let's break down why:\n B. The Microsoft Authenticator App: This app provides a highly secure method of MFA. It can use push notifications for quick approval or generate one-time passcodes (OTPs), both relying on a secure connection to Azure AD and a trusted device. This aligns with modern security best practices, avoiding reliance on easily intercepted channels.\n C. SMS messages: While less secure than app-based methods, SMS messaging is still a viable option for MFA. Azure AD can send a one-time passcode to a user's phone number, requiring them to enter it during sign-in. It offers broad accessibility but has vulnerabilities to SIM swapping and interception.\n E. Windows Hello for Business: This method leverages biometric authentication (fingerprint or facial recognition) or a PIN tied to a specific device. It's integrated deeply into the operating system and linked to Azure AD, providing a strong and convenient form of MFA that relies on device-bound credentials.\n Why the other options are incorrect:\n A. Security Questions: Security questions are generally considered weak forms of authentication. Answers are often easily guessable or discoverable through social engineering, making them unreliable for MFA.\n D. A smart card: While smart cards can be used for authentication in general, Azure AD Multi-Factor Authentication specifically uses the methods in options B, C and E. Smart card authentication would typically involve a certificate-based authentication flow and not a traditional MFA prompt.Justification Details: Azure AD MFA is designed to enhance security by requiring users to provide multiple forms of verification before granting access. The fundamental principle is that compromising one factor (like a password) should not grant unauthorized access because an attacker would also need to overcome another independent factor. The strength of the selected methods lies in their diversity, requiring distinct forms of authentication tied to either something you know (password/PIN), something you have (registered device), or something you are (biometric data).\n Each option B, C, and E requires a separate attack vector than simply compromising a password. \nSupporting Links:\n <a href=https://learn.microsoft.com/en-us/entra/identity/authentication/concept-mfa-howitworks>Azure AD Multi-Factor Authentication</a>\n <a href=https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business>Windows Hello for Business</a>",
     "images": [],
     "interactivity": null
   },
@@ -3211,7 +3201,7 @@
             "correctAnswer": false
         }
     ],
-    "explanation": "Correct Answers: Yes, Yes, No.\n• External (alternate) email addresses **are supported** as an authentication method for SSPR.\n• Microsoft Authenticator app notifications **can be used** for SSPR verification.\n• Users **do not need to already be signed in** to perform SSPR — the purpose of SSPR is to reset the password when the user cannot sign in. \nReference:\n https://learn.microsoft.com/azure/active-directory/authentication/concept-sspr-howitworks",
+    "explanation": "Correct Answers: Yes, Yes, No.\n• External (alternate) email addresses **are supported** as an authentication method for SSPR.\n• Microsoft Authenticator app notifications **can be used** for SSPR verification.\n• Users **do not need to already be signed in** to perform SSPR — the purpose of SSPR is to reset the password when the user cannot sign in. \nReference:\n <a href=https://learn.microsoft.com/azure/active-directory/authentication/concept-sspr-howitworks>https://learn.microsoft.com/azure/active-directory/authentication/concept-sspr-howitworks</a>",
     "images": []
 },
 
@@ -3226,7 +3216,7 @@
 "C.Connect to your security sources.",
 "D.Create a custom detection rule."        ],
         "answer": "C.Connect to your security sources.",
-        "explanation": "The correct answer is C.\n Before enabling any features of Microsoft Sentinel, such as hunting, incident correlation, or creating detection rules, it's crucial to establish a connection to your relevant security data sources. Microsoft Sentinel is a SIEM (Security Information and Event Management) and SOAR (Security Orchestration, Automation and Response) solution. Its primary function revolves around collecting, analyzing, and responding to security data. Without connected data sources, Sentinel would be empty and unable to perform any analysis or generate meaningful insights. Connecting security sources allows Sentinel to ingest logs, alerts, and other security-related data from various environments, including Azure services, on-premises infrastructure, and third-party security solutions. Only then Sentinel can be effectively used to analyze the data, detect threats, and automate responses. Actions like creating hunting queries or custom detection rules would be meaningless if there is no data for them to operate on. The correlation of alerts into incidents also requires underlying alert data from connected sources. Therefore, connecting to security sources is the mandatory first step. \nRefer to the official Microsoft documentation on connecting data sources to Microsoft Sentinel for further details:\n Connect data sources to Microsoft Sentinel: https://learn.microsoft.com/en-us/azure/sentinel/connect-datasources",
+        "explanation": "The correct answer is C.\n Before enabling any features of Microsoft Sentinel, such as hunting, incident correlation, or creating detection rules, it's crucial to establish a connection to your relevant security data sources. Microsoft Sentinel is a SIEM (Security Information and Event Management) and SOAR (Security Orchestration, Automation and Response) solution. Its primary function revolves around collecting, analyzing, and responding to security data. Without connected data sources, Sentinel would be empty and unable to perform any analysis or generate meaningful insights. Connecting security sources allows Sentinel to ingest logs, alerts, and other security-related data from various environments, including Azure services, on-premises infrastructure, and third-party security solutions. Only then Sentinel can be effectively used to analyze the data, detect threats, and automate responses. Actions like creating hunting queries or custom detection rules would be meaningless if there is no data for them to operate on. The correlation of alerts into incidents also requires underlying alert data from connected sources. Therefore, connecting to security sources is the mandatory first step. \nRefer to the official Microsoft documentation on connecting data sources to Microsoft Sentinel for further details:\n <a href=https://learn.microsoft.com/en-us/azure/sentinel/connect-datasources>Connect data sources to Microsoft Sentinel</a>",
         "images": [],
         "interactivity": null
     },
@@ -3249,7 +3239,7 @@
             "correctAnswer": true
         }
     ],
-    "explanation": "Correct Answers: No, No, Yes. \n• Azure DDoS Protection Standard does **not** defend against MITM attacks — those are prevented through encryption and identity protections.\n• Azure DDoS Protection Standard is **not enabled by default**. Basic DDoS protection is always on, but Standard must be explicitly enabled and billed. \n• Azure DDoS Protection Standard protects against **protocol attacks** (e.g., SYN floods, malformed packets) and volumetric attacks.  \nReference:\n  https://learn.microsoft.com/azure/ddos-protection/ddos-protection-overview",
+    "explanation": "Correct Answers: No, No, Yes. \n• Azure DDoS Protection Standard does **not** defend against MITM attacks — those are prevented through encryption and identity protections.\n• Azure DDoS Protection Standard is **not enabled by default**. Basic DDoS protection is always on, but Standard must be explicitly enabled and billed. \n• Azure DDoS Protection Standard protects against **protocol attacks** (e.g., SYN floods, malformed packets) and volumetric attacks.\nReference:\n <a href=https://learn.microsoft.com/azure/ddos-protection/ddos-protection-overview>https://learn.microsoft.com/azure/ddos-protection/ddos-protection-overview</a>",
     "images": []
 },
 
@@ -3265,7 +3255,7 @@
   ],
   "correctAnswer": "access and application control",
   "placeholder": "— Select an option —",
-  "explanation": "Correct Answer is Access and application control. \nAccess and application control in Microsoft Defender for Cloud helps block malware and unwanted applications by enforcing application whitelisting and reducing the attack surface on Azure virtual machines. This feature strengthens security by limiting what software can run.     \nReference:\n Microsoft Defender for Cloud documentation. https://learn.microsoft.com/en-us/defender-cloud-apps/what-is-defender-for-cloudapps \nhttps://learn.microsoft.com/en-us/azure/defender-for-cloud/adaptive-applicationcontrols \nhttps://learn.microsoft.com/en-us/defender-cloud-apps/access-policy-aad"
+  "explanation": "Correct Answer is Access and application control. \nAccess and application control in Microsoft Defender for Cloud helps block malware and unwanted applications by enforcing application whitelisting and reducing the attack surface on Azure virtual machines. This feature strengthens security by limiting what software can run. \nReference:\n <a href=https://learn.microsoft.com/en-us/defender-cloud-apps/what-is-defender-for-cloudapps>Microsoft Defender for Cloud</a> \n<a href=https://learn.microsoft.com/en-us/azure/defender-for-cloud/adaptive-applicationcontrols>https://learn.microsoft.com/en-us/azure/defender-for-cloud/adaptive-applicationcontrols</a> \n<a href=https://learn.microsoft.com/en-us/defender-cloud-apps/access-policy-aad>https://learn.microsoft.com/en-us/defender-cloud-apps/access-policy-aad</a>"
 },
 
 {
@@ -3286,7 +3276,7 @@
             "correctAnswer": true
         }
     ],
-    "explanation": "Correct Answers: No, Yes, Yes. \n• **Information Barriers** do NOT scan content or detect inappropriate language. They only restrict communication between segments.\n • **Communication Compliance** can scan content in SharePoint Online and OneDrive for Business. \n• Communication Compliance also scans **internal and external emails** in Exchange Online for policy violations (harassment, threatening language, data leaks, etc.).        \nReference:\n  https://learn.microsoft.com/microsoft-365/compliance/communication-compliance  \n https://learn.microsoft.com/microsoft-365/compliance/information-barriers",
+    "explanation": "Correct Answers: No, Yes, Yes. \n• **Information Barriers** do NOT scan content or detect inappropriate language. They only restrict communication between segments.\n • **Communication Compliance** can scan content in SharePoint Online and OneDrive for Business. \n• Communication Compliance also scans **internal and external emails** in Exchange Online for policy violations (harassment, threatening language, data leaks, etc.).        \nReference:\n  <a href=https://learn.microsoft.com/microsoft-365/compliance/communication-compliance>https://learn.microsoft.com/microsoft-365/compliance/communication-compliance</a>\n <a href=https://learn.microsoft.com/microsoft-365/compliance/information-barriers>https://learn.microsoft.com/microsoft-365/compliance/information-barriers</a>",
     "images": []
 },
 
@@ -3302,7 +3292,7 @@
   ],
   "correctAnswer": "federation",
   "placeholder": "— Select an option —",
-  "explanation": "Correct Answer is Federation. \nFederation enables Single Sign-On (SSO) across multiple identity providers by establishing trust relationships. This allows users to access resources without repeatedly signing in, supporting seamless authentication across different systems.     \nReference:\n Microsoft Identity Federation documentation. https://learn.microsoft.com/en-us/azure/active-directory/hybrid/connect/whatis-fed"
+  "explanation": "Correct Answer is Federation. \nFederation enables Single Sign-On (SSO) across multiple identity providers by establishing trust relationships. This allows users to access resources without repeatedly signing in, supporting seamless authentication across different systems.     \nReference:\n<a href=https://learn.microsoft.com/en-us/azure/active-directory/hybrid/connect/whatis-fed> Microsoft Identity Federation</a>"
 },
 
 {
@@ -3316,7 +3306,7 @@
 "C.IaaS."
         ],
         "answer": "A.SaaS.",
-        "explanation": "The correct answer is A (SaaS).\n SaaS (Software as a Service) provides a complete software application that is hosted in the cloud and ready to use. The provider manages everything from the infrastructure to the application, including updates, security, and maintenance. As a consumer, you only manage your data, user accounts, and user devices, which aligns perfectly with the scenario described.\n In contrast, PaaS (Platform as a Service) gives you a platform to develop, run, and manage applications without the complexity of managing the underlying infrastructure. You manage the application and data, but the provider handles the operating systems, servers, and networking.\n IaaS (Infrastructure as a Service) provides access to fundamental computing resources like virtual machines, storage, and networks. You manage the operating system, storage, deployed applications, and potentially some networking components. It provides the most control but also requires the most management overhead. Since the scenario specifies managing only data, user accounts, and user devices, the cloud provider would handle all other aspects of the service, making SaaS the most appropriate model. This allows the user to focus solely on application usage and data management, freeing them from infrastructure and platform concerns.\nFor further reading: Microsoft Azure documentation on cloud models:\n https://azure.microsoft.com/en-us/overview/what-is-cloudcomputing/ \nNIST definition of SaaS: https://csrc.nist.gov/glossary/term/saas",
+        "explanation": "The correct answer is A (SaaS).\n SaaS (Software as a Service) provides a complete software application that is hosted in the cloud and ready to use. The provider manages everything from the infrastructure to the application, including updates, security, and maintenance. As a consumer, you only manage your data, user accounts, and user devices, which aligns perfectly with the scenario described.\n In contrast, PaaS (Platform as a Service) gives you a platform to develop, run, and manage applications without the complexity of managing the underlying infrastructure. You manage the application and data, but the provider handles the operating systems, servers, and networking.\n IaaS (Infrastructure as a Service) provides access to fundamental computing resources like virtual machines, storage, and networks. You manage the operating system, storage, deployed applications, and potentially some networking components. It provides the most control but also requires the most management overhead. Since the scenario specifies managing only data, user accounts, and user devices, the cloud provider would handle all other aspects of the service, making SaaS the most appropriate model. This allows the user to focus solely on application usage and data management, freeing them from infrastructure and platform concerns.\nFor further reading:\n <a href=https://azure.microsoft.com/en-us/overview/what-is-cloudcomputing>Microsoft Azure documentation on cloud models</a> \n <a href=https://csrc.nist.gov/glossary/term/saas>NIST definition of SaaS</a>",
         "images": [],
         "interactivity": null
     },
@@ -3333,9 +3323,8 @@
   ],
   "correctAnswer": "is tied to the lifecycle of the resource that uses it",
   "placeholder": "— Select an option —",
-  "explanation": "Correct Answer is tied to the lifecycle of the resource that uses it.\nA system-assigned managed identity in Azure is automatically created and tied to the lifecycle of the resource that uses it. When the resource is deleted, the identity is also removed, simplifying identity management.     \nReference:\n Microsoft Managed Identities documentation https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/"
+  "explanation": "Correct Answer is tied to the lifecycle of the resource that uses it.\nA system-assigned managed identity in Azure is automatically created and tied to the lifecycle of the resource that uses it. When the resource is deleted, the identity is also removed, simplifying identity management.     \nReference:\n <a href=https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources>Microsoft Managed Identities</a>"
 },
-
 {
     "id": 175,
     "type": "boolean",
@@ -3354,10 +3343,9 @@
             "correctAnswer": false
         }
     ],
-    "explanation": "Correct Answers: Yes, No, No.\n• Devices registered or joined to Azure AD **do have a stored device identity** in Azure AD.\n• A system‑assigned managed identity is **tied to a single Azure resource** and cannot be shared.\n• A user‑assigned managed identity is **independent** of the resource. Deleting the resource **does NOT delete** the user-assigned identity.\nReference:\n  https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview",
+    "explanation": "Correct Answers: Yes, No, No.\n• Devices registered or joined to Azure AD **do have a stored device identity** in Azure AD.\n• A system‑assigned managed identity is **tied to a single Azure resource** and cannot be shared.\n• A user‑assigned managed identity is **independent** of the resource. Deleting the resource **does NOT delete** the user-assigned identity.\nReference:\n <a href=https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview>https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview</a>",
     "images": []
 },
-
 {
         "id": 176,
         "type": "single_choice",
@@ -3369,14 +3357,10 @@
 "D.Compliance score"
         ],
         "answer": "D.Compliance score",
-        "explanation": "The correct answer is D.\n https://learn.microsoft.com/en-us/purview/compliance-score-calculation",
+        "explanation": "The correct answer is D.\n <a href=https://learn.microsoft.com/en-us/purview/compliance-score-calculation>https://learn.microsoft.com/en-us/purview/compliance-score-calculation</a>",
         "images": [],
         "interactivity": null
     },
-
-
-
-
 {
     "id": 177,
     "type": "boolean",
@@ -3395,7 +3379,7 @@
             "correctAnswer": true
         }
     ],
-    "explanation": "Correct Answers: Yes, Yes, Yes.\n• GitHub is an identity provider — it is a code hosting and collaboration platform, although it can integrate with identity providers like Azure AD.\n• Federation enables **SSO across multiple service providers** via standards such as SAML, OAuth, and OpenID Connect.\n• A central identity provider (IdP) such as Azure AD, Okta, or AD FS **manages authentication, authorization, auditing, and token issuance**.\nReference:\n  https://learn.microsoft.com/azure/active-directory/develop/authentication-vs-authorization  https://learn.microsoft.com/azure/active-directory/hybrid/whatis-fed",
+    "explanation": "Correct Answers: Yes, Yes, Yes.\n• GitHub is an identity provider — it is a code hosting and collaboration platform, although it can integrate with identity providers like Azure AD.\n• Federation enables **SSO across multiple service providers** via standards such as SAML, OAuth, and OpenID Connect.\n• A central identity provider (IdP) such as Azure AD, Okta, or AD FS **manages authentication, authorization, auditing, and token issuance**.\nReference:\n <a href=https://learn.microsoft.com/azure/active-directory/develop/authentication-vs-authorization>https://learn.microsoft.com/azure/active-directory/develop/authentication-vs-authorization</a>\n<a href=https://learn.microsoft.com/azure/active-directory/hybrid/whatis-fed>https://learn.microsoft.com/azure/active-directory/hybrid/whatis-fed</a>",
     "images": []
 },
 {
@@ -3408,8 +3392,6 @@
     { "id": "software as a service (SaaS)", "label": "Software as a Service (SaaS)" },
     { "id": "on-premises datacenter", "label": "On-premises datacenter" },
     { "id": "infrastructure as a service (IaaS)", "label": "Infrastructure as a Service (IaaS)" }
-
-
   ],
   "buckets": [
 
@@ -3417,7 +3399,6 @@
     { "id": "Step # 2", "accepts": ["Infrastructure as a Service (IaaS)"] },
     { "id": "Step # 3", "accepts": ["platform as a service (PaaS)"] },
     { "id": "Step # 4", "accepts": ["Software as a Service (SaaS)"] }    
-
 
   ],
   "explanation": "Order from most to least customer responsibility: On-premises datacenter → IaaS → PaaS → SaaS."
@@ -3435,9 +3416,8 @@
   ],
   "correctAnswer": "a security principal",
   "placeholder": "— Select an option —",
-  "explanation": "Correct Answer is a security principal. \nIn Azure Active Directory, roles are assigned to security principals, which can be users, groups, or service principals. This allows for role-based access control (RBAC) to manage permissions effectively.\nReference:\n Microsoft Azure AD RBAC documentation. https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal"
+  "explanation": "Correct Answer is a security principal. \nIn Azure Active Directory, roles are assigned to security principals, which can be users, groups, or service principals. This allows for role-based access control (RBAC) to manage permissions effectively.\nReference:\n <a href=https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal>Microsoft Azure AD RBAC</a>"
 },
-
 
 {
     "id": 180,
@@ -3450,11 +3430,10 @@
         "D.Conditional access in Azure AD"
     ],
     "answer": "B.Azure AD Privileged Identity Management (PIM)",
-"explanation": "The correct answer is B (Azure AD Privileged Identity Management).\nPIM allows just-in-time (JIT) role activation, approval workflows, time-bound access, MFA enforcement, and granular oversight of privileged role usage. These capabilities directly match the requirement for approval-based, time-limited role activation. \nAccess reviews help validate existing access periodically but do not provide time-bound activation. \nIdentity Protection focuses on detecting risky sign-ins and user risk.\nConditional Access governs access decisions based on conditions but does not manage privileged role activation flows. \nAzure AD Privileged Identity Management (PIM): https://learn.microsoft.com/en-us/azure/activedirectory/privileged-identity-management/pim-configure",    
+"explanation": "The correct answer is B (Azure AD Privileged Identity Management).\nPIM allows just-in-time (JIT) role activation, approval workflows, time-bound access, MFA enforcement, and granular oversight of privileged role usage. These capabilities directly match the requirement for approval-based, time-limited role activation. \nAccess reviews help validate existing access periodically but do not provide time-bound activation. \nIdentity Protection focuses on detecting risky sign-ins and user risk.\nConditional Access governs access decisions based on conditions but does not manage privileged role activation flows. \n<a href=https://learn.microsoft.com/en-us/azure/activedirectory/privileged-identity-management/pim-configure>Azure AD Privileged Identity Management (PIM)</a>",    
     "images": [],
     "interactivity": null
 },
-
 
 {
     "id": 181,
@@ -3483,9 +3462,8 @@
   ],
   "correctAnswer": "Microsoft cloud security benchmark",
   "placeholder": "— Select an option —",
-  "explanation": "Correct Answer is Microsoft cloud security benchmark.\nThe Microsoft cloud security benchmark provides baseline security recommendations and best practices for protecting Azure services. It helps organizations align with industry standards and improve their cloud security posture.     \nReference:\n Microsoft Cloud Security Benchmark documentation. https://learn.microsoft.com/en-us/security/benchmark/azure/overview"
+  "explanation": "Correct Answer is Microsoft cloud security benchmark.\nThe Microsoft cloud security benchmark provides baseline security recommendations and best practices for protecting Azure services. It helps organizations align with industry standards and improve their cloud security posture.     \nReference:\n <a href=https://learn.microsoft.com/en-us/security/benchmark/azure/overview>Microsoft Cloud Security Benchmark</a>"
 },
-
 
 {
     "id": 183,
@@ -4653,48 +4631,7 @@ if (pauseBtn) {
       renderMarkForReview(q, container);
     }
 
-    function renderDragAndDropQuestion(q, container) {
-      container.innerHTML = '';
-      const title = document.createElement('div'); title.className = 'question-text';
-      title.textContent = q.question || 'Drag & Drop'; container.appendChild(title);
-      renderQuestionImages(q, container);
-      const layout = String(q.layout || '').toLowerCase();
-      if (layout === 'bucket') { renderDndBuckets(q, container); } else { renderDndReorder(q, container); }
-      renderMarkForReview(q, container);
-    }
-
-    function renderDndReorder(q, container) {
-      const items = (q.items || []).map(it => (typeof it === 'object' && it)
-        ? { label: it.label ?? String(it.value ?? it), value: it.value ?? it.label ?? String(it) }
-        : { label: String(it), value: String(it) });
-      const list = document.createElement('div'); list.className = 'dnd-list'; container.appendChild(list);
-      const currentOrder = Array.isArray(userAnswers[q.id]) ? [...userAnswers[q.id]] : items.map(it => it.value);
-      const byValue = new Map(items.map(it => [it.value, it.label]));
-      currentOrder.forEach(val => { const label = byValue.get(val) ?? String(val); const el = createDraggableItem(q.id, val, label); list.appendChild(el); });
-      list.querySelectorAll('.dnd-item').forEach(el => {
-        el.addEventListener('dragstart', (ev) => { ev.dataTransfer.setData('text/plain', el.dataset.value); el.classList.add('dragging'); });
-        el.addEventListener('dragend', () => el.classList.remove('dragging'));
-        el.addEventListener('dragover', (ev) => { ev.preventDefault(); el.classList.add('drag-over'); });
-        el.addEventListener('dragleave', () => el.classList.remove('drag-over'));
-        el.addEventListener('drop', (ev) => {
-          ev.preventDefault();
-          const draggedVal = ev.dataTransfer.getData('text/plain');
-          const dragEl = list.querySelector(`.dnd-item[data-value="${CSS.escape(draggedVal)}"]`);
-          el.classList.remove('drag-over');
-          if (!dragEl || dragEl === el) return;
-          const rect = el.getBoundingClientRect();
-          const before = (ev.clientY - rect.top) < rect.height / 2;
-          list.insertBefore(dragEl, before ? el : el.nextSibling);
-          const order = Array.from(list.querySelectorAll('.dnd-item')).map(n => n.dataset.value);
-          onAnswerChange(q.id, order);
-        });
-      });
-      const initialOrder = Array.from(list.querySelectorAll('.dnd-item')).map(n => n.dataset.value);
-      if (!Array.isArray(userAnswers[q.id]) || userAnswers[q.id].length !== initialOrder.length) {
-        onAnswerChange(q.id, initialOrder);
-      }
-    }
-
+    
     function renderDndBuckets(q, container) {
       const items = (q.items || []).map(it => (typeof it === 'object' && it)
         ? { label: it.label ?? String(it.value ?? it), value: it.value ?? it.label ?? String(it) }
@@ -5204,8 +5141,6 @@ function renderSingleChoiceQuestion(q, container) {
   }
 
 
-
-
     /* ------------ Calculate Score (all questions) + PASS/FAIL ------------- */
     function calcScoreAll() {
       if (!questions.length) {
@@ -5509,9 +5444,6 @@ if (reviewMarkedBtnMobile) reviewMarkedBtnMobile.addEventListener('click', handl
       calcScoreAll();
     });
 
-
-    
-
     function getCorrectAnswerText(q) {
       const t = normalizeType(q.type);
       const esc = (s) => String(s);
@@ -5604,17 +5536,11 @@ if (reviewMarkedBtnMobile) reviewMarkedBtnMobile.addEventListener('click', handl
       showExplanation(q);
     }
 
-
 /* ------------------------ Boot ------------------------- */
     // Do NOT auto-load embedded questions; wait for Start Exam.
     window.addEventListener('DOMContentLoaded', () => {
       updateProgress();
     });
-
-
-
   </script>
-
-
 </body>
 </html>
