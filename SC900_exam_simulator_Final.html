@@ -4630,8 +4630,7 @@ if (pauseBtn) {
       renderMarkForReview(q, container);
     }
 
-    
-    function renderDndBuckets(q, container) {
+       function renderDndBuckets(q, container) {
       const items = (q.items || []).map(it => (typeof it === 'object' && it)
         ? { label: it.label ?? String(it.value ?? it), value: it.value ?? it.label ?? String(it) }
         : { label: String(it), value: String(it) });
@@ -4933,7 +4932,6 @@ function renderSingleChoiceQuestion(q, container) {
       if (t === 'multiple_choice') return renderMultipleChoiceQuestion(question, container);
       if (t === 'single_choice')   return renderSingleChoiceQuestion(question, container);
       if (t === 'dropdown')        return renderDropdownQuestion(question, container);
-      if (t === 'drag_and_drop')   return renderDragAndDropQuestion(question, container);
       if (t === 'bucket')          return renderBucketQuestion(question, container);
       if (t === 'hotspot')         return renderHotspotQuestion(question, container);
       if (t === 'boolean')         return renderYesNoQuestion(question, container);
@@ -5061,57 +5059,7 @@ function renderSingleChoiceQuestion(q, container) {
       return;
     }
 
-    // ---- HOTSPOT ----
-    if (t === 'hotspot') {
-      const areas = (q.interactivity && Array.isArray(q.interactivity.hotspot_areas))
-        ? q.interactivity.hotspot_areas : [];
-
-      if (areas.length > 1) {
-        const allOk = areas.every((area, i) => {
-          const sel = userAnswers[`hotspot_${q.id}_${i}`];
-          return normVal(sel) === normVal(area.answer);
-        });
-        showFeedback(allOk, allOk ? 'Correct 🎉' : 'Incorrect ❌');
-        showExplanation(q);
-        return;
-      } else {
-        const sel = userAnswers[q.id];
-        const expected = (typeof q.answer !== 'undefined') ? q.answer : (areas[0]?.answer);
-        const ok = normVal(sel) === normVal(expected);
-        showFeedback(ok, ok ? 'Correct 🎉' : 'Incorrect ❌');
-        showExplanation(q);
-        return;
-      }
-    }
-
-    // ---- DRAG & DROP (Reorder) ----
-    if (t === 'drag_and_drop') {
-      const layout = String(q.layout || '').toLowerCase();
-      if (layout === 'bucket') {
-        // This branch is kept for backward compatibility with any old drag_and_drop bucket layout
-        const map = userAnswers[q.id] || {};
-        const correct = q.correctMapping || {};
-        const items = (q.items || []).map(it =>
-          (typeof it === 'object' && it) ? (it.value ?? it.label ?? String(it)) : String(it));
-        const allOk = items.every(v => {
-          const expected = normVal(correct[v] ?? '');
-          const got = normVal(map[v] ?? '');
-          return expected && expected === got;
-        });
-        showFeedback(allOk, allOk ? 'Correct 🎉' : 'Incorrect ❌');
-        showExplanation(q);
-        return;
-      } else {
-        const order = userAnswers[q.id] || [];
-        const expected = (q.correctOrder || []).map(normVal);
-        const got = order.map(normVal);
-        const ok = expected.length && expected.every((v, i) => v === got[i]);
-        showFeedback(ok, ok ? 'Correct 🎉' : 'Incorrect ❌');
-        showExplanation(q);
-        return;
-      }
-    }
-
+   
     // ---- BUCKET (New type) ----
     if (t === 'bucket') {
       const map = userAnswers[q.id] || {};
@@ -5198,38 +5146,7 @@ function renderSingleChoiceQuestion(q, container) {
           }
         }
 
-        if (t === 'hotspot') {
-          const areas = (q.interactivity && Array.isArray(q.interactivity.hotspot_areas)) ? q.interactivity.hotspot_areas : [];
-          if (areas.length > 1) {
-            return areas.every((area, i) => {
-              const sel = userAnswers[`hotspot_${q.id}_${i}`];
-              return String(sel).trim().toLowerCase() === String(area.answer).trim().toLowerCase();
-            });
-          } else {
-            const sel = userAnswers[q.id];
-            const expected = (typeof q.answer !== 'undefined') ? q.answer : (areas[0]?.answer);
-            return String(sel).trim().toLowerCase() === String(expected).trim().toLowerCase();
-          }
-        }
-
-        if (t === 'drag_and_drop') {
-          const layout = String(q.layout || '').toLowerCase();
-          if (layout === 'bucket') {
-            const map = userAnswers[q.id] || {};
-            const correct = q.correctMapping || {};
-            const items = (q.items || []).map(it => (typeof it === 'object' && it) ? (it.value ?? it.label ?? String(it)) : String(it));
-            return items.every(v => {
-              const expected = String(correct[v] ?? '');
-              const got = String(map[v] ?? '');
-              return expected && expected.toLowerCase() === got.toLowerCase();
-            });
-          }
-          const order = userAnswers[q.id] || [];
-          const expected = (q.correctOrder || []).map(v => String(v).trim().toLowerCase());
-          const got = order.map(v => String(v).trim().toLowerCase());
-          return expected.length && expected.every((v, i) => v === got[i]);
-        }
-
+       
         if (t === 'bucket') {
           const map = userAnswers[q.id] || {};
           const correctMap = buildCorrectMapping(q);
@@ -5543,4 +5460,3 @@ if (reviewMarkedBtnMobile) reviewMarkedBtnMobile.addEventListener('click', handl
   </script>
 </body>
 </html>
-
