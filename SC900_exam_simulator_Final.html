@@ -253,6 +253,7 @@
       <button id="shuffleBtn" class="secondary" disabled>Shuffle Questions</button>
       <button id="loadJsonBtn" class="secondary" disabled>Load Embedded JSON</button>
       <button id="pickJsonBtn" class="secondary" disabled>Load JSON File…</button>
+      <button id="random50Btn" class="secondary">Random 50 Questions</button>
       <input id="fileInput" type="file" accept="application/json" style="display:none" />
     </div>
   </header>
@@ -4273,6 +4274,43 @@
       if (!CSS.escape) CSS.escape = function(value) { return String(value).replace(/[^a-zA-Z0-9_\-]/g, '\\$&'); };
     })();
 
+/* ------------------------- Random 50 ------------------------- */
+
+// Keep a safe copy of ALL questions
+
+
+document.getElementById('random50Btn').addEventListener('click', function () {
+    if (!originalQuestions || originalQuestions.length < 50) {
+        alert('Not enough questions to select 50.');
+        return;
+    }
+
+    // Fisher–Yates shuffle
+    let shuffled = [...originalQuestions];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+
+    // Pick the first 50
+    questions = shuffled.slice(0, 50);
+
+    // Reset simulator
+    idx = 0;
+    updateProgress();
+    renderQuestion(questions[idx], questionContainer);
+
+    // Nice on-screen feedback
+    if (typeof showFeedback === "function") {
+        showFeedback(true, 'Random 50 questions selected.');
+    }
+
+    // Update the summary panel (if your build includes it)
+    if (typeof summarize === "function") {
+        summarize();
+    }
+});
+
 
 
     /* ------------------------- State ------------------------- */
@@ -5460,5 +5498,6 @@ if (reviewMarkedBtnMobile) reviewMarkedBtnMobile.addEventListener('click', handl
   </script>
 </body>
 </html>
+
 
 
